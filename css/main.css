@@ -16,20 +16,20 @@ a {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    /* background-color: blue; */
+    /* background-color: rgb(255, 223, 223); */
 }
 section {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 section h2 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 30px;
 }
-/* 전체 레이아웃 */
+/* 전체레이아웃 */
 /* 상단 */
 .header {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
 .header-top {
@@ -72,6 +72,7 @@ figure {
     position: relative;
     width: 100%;
     height: 1100px;
+
     background-color: #333;
 }
 /* video */
@@ -80,16 +81,16 @@ figure video {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     display: block;
     object-fit: cover;
     opacity: 0.3;
-    height: 100%;
 }
 /* 비디오 내용 */
 .video-txt {
     position: relative;
-    color: #fff;
     padding-top: 17%;
+    color: #fff;
 }
 .video-txt h2 {
     font-size: 120px;
@@ -105,20 +106,25 @@ figure video {
     padding: 10px 0;
     text-align: center;
     color: #fff;
+
     border: 1px solid #fff;
 }
 
 /* news */
 .news {
-    background-color: aliceblue;
+    background-color: rgb(216, 223, 229);
 }
-.news-wrap {
+.news-wrap,
+.work-wrap {
     display: flex;
     gap: 20px;
 }
-.news-wrap li {
+.news-wrap li,
+.work-wrap li {
+    position: relative;
     width: calc(100% / 4);
     padding: 10px;
+    padding-bottom: 20px;
     background-color: #fff;
 }
 .pic {
@@ -141,4 +147,62 @@ figure video {
 .news-wrap p {
     color: #888;
     line-height: 1;
+}
+/* 작품 */
+.work-wrap img {
+    width: 100%;
+    display: block;
+}
+.work-wrap li {
+    background-color: #333;
+    color: #fff;
+}
+.badge {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 20px;
+}
+.play {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 60px;
+    color: #333;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+}
+.overay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 0.3s;
+}
+.work-wrap .pic:hover .overay {
+    opacity: 1;
+}
+.content {
+    padding: 10px;
+}
+.content button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f00;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 15px;
 }
